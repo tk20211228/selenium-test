@@ -24,8 +24,8 @@ jobs:
           sudo mv chromedriver /usr/local/bin
       - name: Run tests and save results
         run: npm test > test-results.json
-      - name: Analyze test results
-        run: python analyze_results.py > analysis-results.txt
+      # - name: Analyze test results
+      #   run: python analyze_results.py > analysis-results.txt
       - name: Send results via email
         uses: dawidd6/action-send-mail@v2
         with:
@@ -37,4 +37,4 @@ jobs:
           to: ${{ secrets.MAIL_TO }}
           from: GitHub Actions <${{ secrets.MAIL_FROM }}>
           body: Check the logs at ${{ github.server_url }}/${{ github.repository }}/actions
-          attachments: analysis-results.txt
+          attachments: test-results.json
