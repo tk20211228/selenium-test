@@ -15,13 +15,13 @@ const assert = require("assert");
   
     await driver.findElement(By.id("input-44")).click()
     await driver.findElement(By.id("input-44")).sendKeys("t5kuboki@gmail.com")
-    await driver.sleep(5000);
+    await driver.sleep(3000);
     await driver.findElement(By.id("input-47")).click()
     await driver.findElement(By.id("input-47")).sendKeys("test123!!")
-    await driver.sleep(5000);
+    await driver.sleep(3000);
     await driver.findElement(By.css(".v-input--selection-controls__ripple")).click()
     await driver.findElement(By.css(".primary > .v-btn__content")).click()
-    await driver.sleep(5000);
+    await driver.sleep(3000);
   } catch (e) {
     console.log(e)
   } finally {
