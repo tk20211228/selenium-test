@@ -33,5 +33,5 @@ jobs:
           password: ${{ secrets.MAIL_API_KEY }}
           subject: Test result in ${{ github.repository }}
           to: ${{ secrets.MAIL_TO }}
-          from: GitHub Actions <${{ secrets.MAIL_TO }}>
+          from: GitHub Actions <${{ secrets.MAIL_FROM }}>
           body: Check the logs at ${{ github.server_url }}/${{ github.repository }}/actions
