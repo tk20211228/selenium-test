@@ -1,6 +1,12 @@
 name: Run Selenium Tests
 
-on: [push]
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   test:
@@ -24,8 +30,17 @@ jobs:
           sudo mv chromedriver /usr/local/bin
       - name: Run tests and save results
         run: npm test > test-results.json
-      # - name: Analyze test results
-      #   run: python analyze_results.py > analysis-results.txt
+      - name: Commit results
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add test-results.txt
+          git commit -m "Add test results" || echo "No changes to commit"
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
       - name: Send results via email
         uses: dawidd6/action-send-mail@v2
         with:
