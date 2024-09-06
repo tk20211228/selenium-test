@@ -34,7 +34,7 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add test-results.txt
+          git add test-results.json
           git commit -m "Add test results" || echo "No changes to commit"
       - name: Push changes
         uses: ad-m/github-push-action@master
