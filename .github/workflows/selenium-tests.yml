@@ -29,9 +29,9 @@ jobs:
         with:
           server_address: smtp.resend.com
           server_port: 465
-          username: ${{ secrets.MAIL_USERNAME }}
+          username: ${{ secrets.RESEND_USERNAME }}
           password: ${{ secrets.MAIL_API_KEY }}
           subject: Test result in ${{ github.repository }}
           to: ${{ secrets.MAIL_TO }}
-          from: GitHub Actions <${{ secrets.MAIL_USERNAME }}>
+          from: GitHub Actions <${{ secrets.MAIL_TO }}>
           body: Check the logs at ${{ github.server_url }}/${{ github.repository }}/actions
