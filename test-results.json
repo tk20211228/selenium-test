@@ -13,7 +13,7 @@ WebDriverError: unknown error: Chrome failed to start: exited abnormally.
     at parseHttpResponse (/home/runner/work/selenium-test/selenium-test/node_modules/selenium-webdriver/lib/http.js:514:13)
     at Executor.execute (/home/runner/work/selenium-test/selenium-test/node_modules/selenium-webdriver/lib/http.js:446:28)
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
-  remoteStacktrace: '#0 0x55d5957cbe89 <unknown>\n'
+  remoteStacktrace: '#0 0x557c26aece89 <unknown>\n'
 }
 WebDriverError: unknown error: Chrome failed to start: exited abnormally.
   (unknown error: DevToolsActivePort file doesn't exist)
@@ -22,5 +22,5 @@ WebDriverError: unknown error: Chrome failed to start: exited abnormally.
     at parseHttpResponse (/home/runner/work/selenium-test/selenium-test/node_modules/selenium-webdriver/lib/http.js:514:13)
     at Executor.execute (/home/runner/work/selenium-test/selenium-test/node_modules/selenium-webdriver/lib/http.js:446:28)
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
-  remoteStacktrace: '#0 0x563b15e10e89 <unknown>\n'
+  remoteStacktrace: '#0 0x55ac607e6e89 <unknown>\n'
 }
